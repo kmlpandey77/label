@@ -1,0 +1,13 @@
+{
+    "name": "kmlpandey77/label",
+    "description": "labels",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kamal Pandey",
+            "email": "kml.pandey77@gmail.com"
+        }
+    ],
+    "require": {}
+}
