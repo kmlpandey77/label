@@ -9,5 +9,14 @@
             "email": "kml.pandey77@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Kmlpandey77\\Label\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+
+    },
     "require": {}
 }
