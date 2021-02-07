@@ -18,5 +18,15 @@
         ]
 
     },
-    "require": {}
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kmlpandey77\\Label\\Provider\\LabelServiceProvider"
+            ],
+            "aliases": {
+                "Label": "Kmlpandey77\\Label\\Facades\\Label"
+            }
+        }
+    }
 }
