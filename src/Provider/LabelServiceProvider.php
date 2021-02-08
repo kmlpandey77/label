@@ -20,6 +20,15 @@ class LabelServiceProvider extends ServiceProvider
     $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
     $this->registerRoutes();
     $this->loadViewsFrom(__DIR__.'/../../resources/views/label', 'label');
+    $this->publishes([
+        __DIR__.'/../../config/label.php' => config_path('label.php'),
+      ], 'config');
+
+    $this->publishes([
+    __DIR__.'/../../resources/views' => resource_path('views/vendor/label'),
+    ], 'views');
+
+
   }
 
   protected function registerRoutes()
