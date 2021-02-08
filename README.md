@@ -1,7 +1,7 @@
-#Laravel Label
+# Laravel Label
 A package for handling websites title and content dynamically.
 
-###Installation
+### Installation
 `composer require Kmlpandey77/label`
 
 This package will be automatically register.
@@ -16,7 +16,7 @@ Now, You want to change view file.You can modify as your requirement using:
 
 `php artisan vendor:publish --provider="Kmlpandey77\Label\Provider\LabelServiceProvider" --tag="views"`
 
-###Usage
+### Usage
 You can change your middleware and prefix as your own in `config/label.php`
 
 ```php
