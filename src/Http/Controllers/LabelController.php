@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Kmlpandey77\Label\Models\Label as LabelModel;
 use Illuminate\Support\Str;
 
+
 class LabelController extends Controller
 {
     /**
