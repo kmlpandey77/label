@@ -7,10 +7,11 @@ class Label{
 
     public function get($labelId)
     {
+        $locale = app()->currentLocale();
         list($page, $id) = explode(':', $labelId);
 
-		$labels = Cache::remember('labels.' . $page, 30*24*60, function () use($page) {
-			return LabelModel::select('labelid', 'value')->where('page', $page)->get()->pluck('value', 'labelid')->toArray();
+		$labels = Cache::remember('labels.'.$locale.'.' . $page, 30*24*60, function () use($page,$locale) {
+			return LabelModel::select('labelid', 'value')->where('lang',$locale)->where('page', $page)->get()->pluck('value', 'labelid')->toArray();
 		});
 
 		if(isset($labels[$labelId])){

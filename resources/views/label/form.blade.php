@@ -38,6 +38,10 @@
     @foreach(config('label.lang') as $lang)
 	<div class="form-group row">
 		<label class="col-sm-2 col-form-label text-right" for="value">Value[{{$lang}}]</label>
+        @if(isset($labels) && $labels)
+            <input type="hidden" name="l_id[{{ $lang }}]" value="{{ $labels[$lang]->id }}">
+        @endif
+
 		<div class="col-sm-6">
 			<textarea class="form-control" placeholder="Value" name="value[{{$lang}}]">{{ old('value', isset($label) && $labels ? $labels[$lang]->value : null) }}</textarea>
 		</div>

@@ -101,9 +101,11 @@ class LabelController extends Controller
         $this->validate($request, [
             'labelid' => 'required',
             ]);
+        // dd($request->value);
         foreach($request->value as $key => $value){
-        $label->value = $value;
-        $label->save();
+            $label = LabelModel::find($request->l_id[$key]);
+            $label->value = $value;
+            $label->save();
         }
         return redirect()->route('labels.index')->with('success', 'Label saved.');
     }
