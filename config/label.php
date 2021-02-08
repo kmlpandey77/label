@@ -3,8 +3,8 @@ return [
 
     'lang' => [
         'en',
-        'np',
-        'fr'
+        // 'np',
+        // 'fr'
     ],
 
     'prefix' => 'admin',

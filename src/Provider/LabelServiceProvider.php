@@ -25,7 +25,7 @@ class LabelServiceProvider extends ServiceProvider
       ], 'config');
 
     $this->publishes([
-    __DIR__.'/../../resources/views' => resource_path('views/vendor/label'),
+    __DIR__.'/../../resources/views/label' => resource_path('views/vendor/label'),
     ], 'views');
 
 
